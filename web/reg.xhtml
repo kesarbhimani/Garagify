@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>Registration From</title>
+
+        <!-- Font Icon -->
+        <link rel="stylesheet" href="Resources/registration-login/fonts/material-icon/css/material-design-iconic-font.min.css"/>
+
+        <!-- Main css -->
+        <link rel="stylesheet" href="Resources/registration-login/css/style.css"/>
+
+        
+    </h:head>
+    <h:body>
+            <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign up</h2>
+                        <!--<form method="POST" class="register-form" id="register-form">-->
+                        <h:form class="register-form">
+                            <p:growl id="msgs" showDetail="true" />  
+                                
+                            <div class="form-group">
+                                <h:outputLabel for="username" class="zmdi zmdi-email"/>
+                                <h:inputText id="username" a:placeholder="Your email as Username" value="#{regManagedBean.username}"/>
+                            </div>
+                            
+                            <div class="form-group">
+                                <h:outputLabel for="password" class="zmdi zmdi-lock"/>
+                                <h:inputSecret id="password" a:placeholder="Your Password" value="#{regManagedBean.password}"/>
+                            </div>
+                            
+                            <div class="form-group">
+                                <h:outputLabel for="firstname" class="zmdi zmdi-account material-icons-name"/>
+                                <h:inputText id="firstname" a:placeholder="Your first name" value="#{regManagedBean.firstname}"/>
+                            </div>                            
+                            
+                            <div class="form-group">
+                                <h:outputLabel for="lastname" class="zmdi zmdi-account material-icons-name"/>
+                                <h:inputText id="lastname" a:placeholder="Your last name" value="#{regManagedBean.lastname}"/>
+                            </div>
+                            
+                            <div class="form-group">
+                                <h:outputLabel for="phone" class="zmdi zmdi-account material-icons-name"/>
+                                <h:inputText id="phone" a:placeholder="Your phone" value="#{regManagedBean.phone}"/>
+                            </div>
+                             
+                            <div class="form-group">                                
+                                <h:outputLabel for="area_id" class="zmdi zmdi-city"/>
+                                <h:inputText id="area_id" a:placeholder="Your AreaId" value="#{regManagedBean.area_id}"/>
+                            </div>
+                                                        
+                            <div class="form-group">
+                                <h:outputLabel for="address" class="zmdi zmdi-city"/>
+                                <h:inputText id="address" a:placeholder="Your Address" value="#{regManagedBean.address}"/>
+                                
+                            </div>
+                            
+                            <div class="form-group form-button">
+                                <!--<input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>-->
+                                <h:commandButton id="subreg" value="Register" class="form-submit" action="#{regManagedBean.addUser()}"/>
+                            </div>
+                        </h:form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="Resources/registration-login/images/signup-image.jpg" alt="sing up image"/></figure>
+                        <a href="login.jsf" class="signup-image-link">I am already member</a>
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+        </div>
+        <!-- JS -->
+    <script src="Resources/registration-login/vendor/jquery/jquery.min.js"></script>
+    <script src="Resources/registration-login/js/main.js"></script>
+    
+    </h:body>
+</html>
+

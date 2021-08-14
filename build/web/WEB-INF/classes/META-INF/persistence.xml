@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="GaragifyJSFPU" transaction-type="JTA">
+    <!--<exclude-unlisted-classes>false</exclude-unlisted-classes>-->
+    <jta-data-source>jdbc/garagify</jta-data-source>
+    <class>entity.TblFeedback</class>
+    <class>entity.TblRating</class>
+    <class>entity.TblGroup</class>
+    <class>entity.TblState</class>
+    <class>entity.TblCar</class>
+    <class>entity.TblServiceDetail</class>
+    <class>entity.TblServiceType</class>
+    <class>entity.TblModel</class>
+    <class>entity.TblArea</class>
+    <class>entity.TblCity</class>
+    <class>entity.TblServiceCart</class>
+    <class>entity.TblServices</class>
+    <class>entity.TblCompany</class>
+    <class>entity.TblUser</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+    <shared-cache-mode>ALL</shared-cache-mode>
+
+    <validation-mode>NONE</validation-mode>
+
+<properties/>
+  </persistence-unit>
+</persistence>
